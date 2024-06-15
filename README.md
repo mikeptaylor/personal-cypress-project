@@ -15,5 +15,5 @@ Key components include:
 # Running Tests
 You can run the tests in the project in the following ways:
 
-* npx cypress open (runs the tests in open mode with the test runner visible)
-* npx cypress run (runs the tests in headless mode in the terminal without the test runner)
+* npx cypress open (run the tests in open mode with the test runner UI)
+* npx cypress run (run the tests in headless mode)
