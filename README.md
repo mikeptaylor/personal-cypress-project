@@ -13,5 +13,7 @@ Key components include:
 * This project illustrates my capability in using Cypress and TypeScript for creating effective end-to-end tests.
 
 # Running Tests
-npx cypress open (runs the tests in open mode with the test runner visible)
-npx cypress run (runs the tests in headless mode in the terminal without the test runner)
+You can run the tests in the project in the following ways:
+
+* npx cypress open (runs the tests in open mode with the test runner visible)
+* npx cypress run (runs the tests in headless mode in the terminal without the test runner)
