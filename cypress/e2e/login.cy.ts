@@ -20,6 +20,7 @@ describe('Testing Login and Logout Functionality', () => {
     loginPage.login(USERNAME, PASSWORD);
     loginPage.verifyLoginSuccessful(dashboardPage.dashboardUrl);
     dashboardPage.openUserMenuAndSelectOption(UserMenuOptions.Logout);
+    cy.url().should('eq', Cypress.config("baseUrl"));
   });
 
   it('Attempts to log in with an invalid username and a valid password', () => {

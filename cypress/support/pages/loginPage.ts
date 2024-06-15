@@ -9,8 +9,8 @@ export default class LoginPage {
 
     // Methods
     login(username: string, password: string) {
-        cy.get(this.usernameField).type(username);
-        cy.get(this.passwordField).type(password);
+        cy.get(this.usernameField).clear().type(username).should('have.value', username);
+        cy.get(this.passwordField).clear().type(password).should('have.value', password);
         this.clickLoginButton();
     }
 
@@ -32,12 +32,12 @@ export default class LoginPage {
     }
 
     verifyUsernameFieldValidation() {
-        cy.get(this.usernameField).should('be.empty');
+        cy.get(this.usernameField).should('be.visible').should('be.empty');
         cy.get(this.usernameFieldValidation).should('be.visible').should('have.text', 'Required');
     }
 
     verifyPasswordFieldValidation() {
-        cy.get(this.passwordField).should('be.empty');
+        cy.get(this.passwordField).should('be.visible').should('be.empty');
         cy.get(this.passwordFieldValidation).should('be.visible').should('have.text', 'Required');
     }
 }
