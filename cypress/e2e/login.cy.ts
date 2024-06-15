@@ -43,4 +43,12 @@ describe('Testing Login and Logout Functionality', () => {
     loginPage.verifyUsernameFieldValidation();
     loginPage.verifyPasswordFieldValidation();
   });
+
+  it('Verfies that the auth/validate API call returns a 302 status code when logging in', () => {
+      cy.intercept('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate').as('login');
+      cy.get(loginPage.usernameField).clear().type(USERNAME).should('have.value', USERNAME);
+      cy.get(loginPage.passwordField).clear().type(PASSWORD).should('have.value', PASSWORD);
+      loginPage.clickLoginButton();
+      cy.wait('@login').its('response.statusCode').should('eq', 302);
+    });
 });
