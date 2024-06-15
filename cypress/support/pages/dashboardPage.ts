@@ -1,4 +1,4 @@
-import {UserMenuOptions} from "../Utils/userMenuUtils";
+import {UserMenuOptions} from "../utils/userMenuUtils";
 
 export default class DashboardPage {
     // Dashboard URL

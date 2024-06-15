@@ -1,7 +1,7 @@
 import LoginPage from "../support/pages/loginPage";
-import {INVALID_PASSWORD, INVALID_USERNAME, PASSWORD, USERNAME} from "../support/Utils/credentialUtils";
+import {INVALID_PASSWORD, INVALID_USERNAME, PASSWORD, USERNAME} from "../support/utils/credentialUtils";
 import DashboardPage from "../support/pages/dashboardPage";
-import {UserMenuOptions} from "../support/Utils/userMenuUtils";
+import {UserMenuOptions} from "../support/utils/userMenuUtils";
 
 const loginPage = new LoginPage();
 const dashboardPage = new DashboardPage();
