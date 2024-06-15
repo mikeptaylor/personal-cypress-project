@@ -1,5 +1,6 @@
 # Cypress Personal Project
 This repository features my personal project using Cypress and TypeScript to demonstrate my skills in end-to-end testing. 
+
 The project focuses on testing a sample web application, highlighting key abilities in setting up and executing tests. 
 
 Key components include:
