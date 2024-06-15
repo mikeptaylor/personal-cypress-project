@@ -11,3 +11,9 @@ Key components include:
 * Test Organisation: Using the page object model test structure with well-commented code for easy understanding and maintenance.
 * Documentation: Basic documentation to guide users through the setup and execution of the tests.
 * This project illustrates my capability in using Cypress and TypeScript for creating effective end-to-end tests.
+
+# Running Tests
+You can run the tests in the project in the following ways:
+
+* npx cypress open (run the tests in open mode with the test runner UI)
+* npx cypress run (run the tests in headless mode)
