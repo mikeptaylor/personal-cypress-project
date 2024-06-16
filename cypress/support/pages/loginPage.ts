@@ -20,6 +20,12 @@ export default class LoginPage {
         cy.get(this.passwordField).should('not.exist');
     }
 
+    verifyLogoutSuccessful(url: string) {
+        cy.url().should('eq', Cypress.config("baseUrl"));
+        cy.get(this.usernameField).should('be.visible');
+        cy.get(this.passwordField).should('be.visible');
+    }
+
     verifyLoginFailed() {
         cy.url().should('eq', Cypress.config("baseUrl"));
         cy.get(this.usernameField).should('be.visible');
