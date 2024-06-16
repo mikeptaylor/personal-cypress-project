@@ -61,12 +61,12 @@ describe('Testing Login and Logout Functionality', () => {
 
   it('Verfies that the auth/validate API call returns a 302 status code when logging in', () => {
     // Intercept the POST request to the auth/validate API endpoint
-      cy.intercept('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate').as('login');
-      // Enter a valid username and password and click the Log In button
-      cy.get(loginPage.usernameField).clear().type(USERNAME).should('have.value', USERNAME);
-      cy.get(loginPage.passwordField).clear().type(PASSWORD).should('have.value', PASSWORD);
-      loginPage.clickLoginButton();
-      // Wait for the POST request to the auth/validate API endpoint to be completed and verify that it returns a 302 status code
-      cy.wait('@login').its('response.statusCode').should('eq', 302);
-    });
+    cy.intercept('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate').as('login');
+    // Enter a valid username and password and click the Log In button
+    cy.get(loginPage.usernameField).clear().type(USERNAME).should('have.value', USERNAME);
+    cy.get(loginPage.passwordField).clear().type(PASSWORD).should('have.value', PASSWORD);
+    loginPage.clickLoginButton();
+    // Wait for the POST request to the auth/validate API endpoint to be completed and verify that it returns a 302 status code
+    cy.wait('@login').its('response.statusCode').should('eq', 302);
+  });
 });
