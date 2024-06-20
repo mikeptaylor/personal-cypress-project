@@ -3,8 +3,8 @@ import {INVALID_PASSWORD, INVALID_USERNAME, PASSWORD, USERNAME} from "../support
 import DashboardPage from "../support/pages/dashboardPage";
 import {UserMenuOptions} from "../support/utils/userMenuUtils";
 
-const loginPage = new LoginPage();
-const dashboardPage = new DashboardPage();
+const loginPage: LoginPage = new LoginPage();
+const dashboardPage: DashboardPage = new DashboardPage();
 
 describe('Testing Login and Logout Functionality', () => {
   // Before each test, visit the base URL

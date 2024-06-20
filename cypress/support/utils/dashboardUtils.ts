@@ -1,0 +1,15 @@
+export enum DashboardNavigationMenuOptions {
+    Search = 'Search',
+    Admin = 'Admin',
+    PIM = 'PIM',
+    Leave = 'Leave',
+    Time = 'Time',
+    Recruitment = 'Recruitment',
+    My_Info = 'My Info',
+    Performance = 'Performance',
+    Dashboard = 'Dashboard',
+    Directory = 'Directory',
+    Maintenance = 'Maintenance',
+    Claim = 'Claim',
+    Buzz = 'Buzz',
+}
