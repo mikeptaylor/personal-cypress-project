@@ -30,7 +30,10 @@ export default class PIMPage {
         if (createLoginDetails) {
             cy.get(this.createLoginDetailsToggle).click();
         }
+        // Intercept the POST request to save the employee
+        cy.intercept('POST', '**/api/v2/pim/employees**').as('saveEmployee');
         cy.get(this.saveButton).click();
+        cy.wait('@saveEmployee').its('response.statusCode').should('eq', 200);
         basePage.waitForLoadingSpinnerToDisappear();
     }
 }
