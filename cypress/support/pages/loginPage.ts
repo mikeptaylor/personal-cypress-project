@@ -1,11 +1,11 @@
 export default class LoginPage {
     // Elements on the Login Page
-    usernameField = 'input[name="username"]';
-    passwordField = 'input[name="password"]';
-    loginButton = '[type="submit"]';
-    invalidCredentialsAlert = '.oxd-alert'
-    usernameFieldValidation = ':nth-child(2) > .oxd-input-group > .oxd-text';
-    passwordFieldValidation = ':nth-child(3) > .oxd-input-group > .oxd-text';
+    usernameField: string = 'input[name="username"]';
+    passwordField: string = 'input[name="password"]';
+    loginButton: string = '[type="submit"]';
+    invalidCredentialsAlert: string = '.oxd-alert'
+    usernameFieldValidation: string = ':nth-child(2) > .oxd-input-group > .oxd-text';
+    passwordFieldValidation: string = ':nth-child(3) > .oxd-input-group > .oxd-text';
 
     // Methods
     login(username: string, password: string) {
