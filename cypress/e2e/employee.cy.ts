@@ -3,7 +3,9 @@ import {PASSWORD, USERNAME} from "../support/utils/credentialUtils";
 import DashboardPage from "../support/pages/dashboardPage";
 import {DashboardNavigationMenuOptions} from "../support/utils/dashboardUtils";
 import PIMPage from "../support/pages/pimPage";
+import BasePage from "../support/pages/basePage";
 
+const basePage: BasePage = new BasePage();
 const loginPage: LoginPage = new LoginPage();
 const dashboardPage: DashboardPage = new DashboardPage();
 const pimPage: PIMPage = new PIMPage();
@@ -23,8 +25,8 @@ describe('Testing the Employee page', () => {
         dashboardPage.selectOptionFromDashboardNavigationMenu(DashboardNavigationMenuOptions.PIM);
         // Checks the URL to confirm that the correct page was loaded
         cy.url().should('eq', pimPage.pimUrl);
-        cy.get('.oxd-loading-spinner', { timeout: 15000 }).should('not.exist');
+        basePage.waitForLoadingSpinnerToDisappear();
         // Adds an employee to the company directory
-        pimPage.addEmployee('John', 'Doe', 'Smith', '12345');
+        pimPage.addEmployee('John', 'James', 'Doe', '12345');
     });
 });
