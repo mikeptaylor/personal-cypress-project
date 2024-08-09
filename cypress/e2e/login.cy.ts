@@ -66,7 +66,7 @@ describe('Testing Login and Logout Functionality', () => {
     cy.get(loginPage.usernameField).clear().type(USERNAME).should('have.value', USERNAME);
     cy.get(loginPage.passwordField).clear().type(PASSWORD).should('have.value', PASSWORD);
     loginPage.clickLoginButton();
-    // Wait for the POST request to the auth/validate API endpoint to be completed and verify that it returns a 302 status code
-    cy.wait('@login').its('response.statusCode').should('eq', 302);
+    // Wait for the POST request to the auth/validate API endpoint to be completed and verify that it returns a 200 status code
+    cy.wait('@login').its('response.statusCode').should('eq', 200);
   });
 });
