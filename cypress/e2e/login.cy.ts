@@ -59,7 +59,7 @@ describe('Testing Login and Logout Functionality', () => {
     loginPage.verifyPasswordFieldValidation();
   });
 
-  it('Verfies that the auth/validate API call returns a 302 status code when logging in', () => {
+  it('Verfies that the auth/validate API call returns a 200 status code when logging in', () => {
     // Intercept the POST request to the auth/validate API endpoint
     cy.intercept('POST', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate').as('login');
     // Enter a valid username and password and click the Log In button
