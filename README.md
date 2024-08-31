@@ -1,19 +1,16 @@
-# Cypress Personal Project
-This repository features my personal project using Cypress and TypeScript to demonstrate my skills in end-to-end testing. 
-
-The project focuses on testing a sample web application, highlighting key abilities in setting up and executing tests. 
+# Cypress Personal Project 
+This personal project focuses on testing sample web application and demonstrates my skills in using Cypress with TypeScript, for creating effective end-to-end tests.
 
 Key components include:
 
 * TypeScript Integration: Utilising TypeScript for improved code quality and type safety.
-* Cypress Framework: Using Cypress for its robust and QA/developer-friendly testing environment.
+* Cypress Framework: Using Cypress for its robust and QA / developer-friendly testing environment.
 * Basic Test Suite: A collection of automated tests covering essential user scenarios and functionality.
-* Test Organisation: Using the page object model test structure with well-commented code for easy understanding and maintenance.
-* Documentation: Documented code to describe the tests
-* This project illustrates my capability in using Cypress and TypeScript for creating effective end-to-end tests.
+* Page Object Model: POM design pattern for reusable and easy to maintain code.
+* Documentation: Documented code to clearly describe the methods and tests
 
 # Running Tests
-You can run the tests in the project in the following ways:
+The tests can be run by using the following commands in the terminal:
 
-* npx cypress open (run the tests in open mode with the test runner UI)
-* npx cypress run (run the tests in headless mode)
+* npx cypress open (run the tests in open mode with the test runner UI present to see the tests in action).
+* npx cypress run (run the tests in headless mode. The test runner UI will not be present. Test results will be recorded directly in the terminal).
