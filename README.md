@@ -1,5 +1,5 @@
 # Cypress Personal Project 
-This personal project focuses on testing sample web application and demonstrates my skills in using Cypress with TypeScript, for creating effective end-to-end tests.
+This personal project focuses on testing a sample web application and demonstrates my skills in using Cypress with TypeScript, for creating effective end-to-end tests.
 
 Key components include:
 
